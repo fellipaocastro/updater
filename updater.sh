@@ -4,4 +4,7 @@ do
     sudo apt-get upgrade
     sudo apt-get autoremove
     sudo apt-get clean
+    pip install --upgrade setuptools
+    pip install --upgrade pip
+    pip3 install --upgrade pip
 done
