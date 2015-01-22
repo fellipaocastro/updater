@@ -7,4 +7,5 @@ do
     pip install --upgrade setuptools
     pip install --upgrade pip
     pip3 install --upgrade pip
+    pip freeze | grep -v '^\-e' | cut -d = -f 1 | xargs pip install -U
 done
