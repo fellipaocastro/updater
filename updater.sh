@@ -1,4 +1,3 @@
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get autoremove -y
-sudo apt-get clean -y
+sudo aptitude update -y
+sudo aptitude safe-upgrade -y
+sudo aptitude clean -y
