@@ -1,11 +1,13 @@
 ubuntu-updater
 ==============
 
-Ubuntu updater
+Ubuntu Updater
 
-Usage
+Setup
 -----
 
 .. code-block:: bash
 
-    $ ./ubuntu-updater.sh
+    $ git clone http://is.gd/r3upLj ~/ubuntu-updater
+    $ ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
+    $ ~/updater.sh
