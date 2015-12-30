@@ -13,3 +13,8 @@ cd ~/gitconfig && git fetch && git rebase && cd -
 cd ~/ubuntu-updater && git fetch && git rebase && cd -
 cd ~/.vim-ide && git fetch && git rebase && cd -
 vim +PluginInstall +qall
+if [[ "$SHELL" == "/bin/zsh" ]]; then
+  rehash
+elif [[ "$SHELL" == "/bin/bash" ]]; then
+  hash -r
+fi
