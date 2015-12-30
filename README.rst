@@ -8,8 +8,7 @@ Setup
 
 .. code-block:: bash
 
-    $ git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
-    $ ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
+    $ wget -NP /tmp http://is.gd/qVPryF && source /tmp/qVPryF
 
 Usage
 -----
