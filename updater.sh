@@ -10,7 +10,9 @@ sudo pip3 install --upgrade pip setuptools flake8 ipdb httpie argparse --upgrade
 gem update
 gem cleanup
 cd ~/ubuntu-updater && git fetch && git rebase && cd -
-cd ~/gitconfig && git fetch && git rebase && cd -
+cd ~/dotfiles && git fetch && git rebase && cd -
+source  ~/.gitconfig
+source  ~/.zsh_aliases
 cd ~/vim-ide && git fetch && git rebase && cd -
 vim +PluginInstall +qa
 if [[ "$SHELL" == "/bin/zsh" ]]; then
