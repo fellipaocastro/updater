@@ -17,6 +17,7 @@ cd ~/ubuntu-updater && git fetch && git rebase && cd -
 
 cd ~/dotfiles && git fetch && git rebase && cd -
 source  ~/.zsh_aliases
+source  ~/.zsh_functions
 
 cd ~/vim-ide && git fetch && git rebase && cd -
 vim +PluginInstall +qa
