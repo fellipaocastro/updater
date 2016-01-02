@@ -12,7 +12,7 @@ gem cleanup
 cd ~/ubuntu-updater && git fetch && git rebase && cd -
 cd ~/gitconfig && git fetch && git rebase && cd -
 cd ~/vim-ide && git fetch && git rebase && cd -
-vim +PluginInstall +qall
+vim +PluginInstall +qa
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
 elif [[ "$SHELL" == "/bin/bash" ]]; then
