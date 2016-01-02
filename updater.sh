@@ -16,7 +16,6 @@ gem cleanup
 cd ~/ubuntu-updater && git fetch && git rebase && cd -
 
 cd ~/dotfiles && git fetch && git rebase && cd -
-source  ~/.gitconfig
 source  ~/.zsh_aliases
 
 cd ~/vim-ide && git fetch && git rebase && cd -
