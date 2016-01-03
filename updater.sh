@@ -18,6 +18,7 @@ cd ~/ubuntu-updater && git fetch --all && git rebase && cd -
 cd ~/dotfiles && git fetch --all && git rebase
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
+tmux source-file ~/.tmux.conf
 cd -
 
 cd ~/vim-ide && git fetch --all && git rebase && cd -
