@@ -15,9 +15,10 @@ gem cleanup
 
 cd ~/ubuntu-updater && git fetch --all && git rebase && cd -
 
-cd ~/dotfiles && git fetch --all && git rebase && cd -
+cd ~/dotfiles && git fetch --all && git rebase
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
+cd -
 
 cd ~/vim-ide && git fetch --all && git rebase && cd -
 vim +PluginInstall +qa
