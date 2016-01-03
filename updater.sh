@@ -15,7 +15,7 @@ gem cleanup
 
 cd ~/ubuntu-updater && git fetch --all && git rebase && cd -
 
-cd ~/dotfiles && git stash && git fetch --all && git rebase && git pop
+cd ~/dotfiles && git stash && git fetch --all && git rebase && git stash pop
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
 tmux source-file ~/.tmux.conf
