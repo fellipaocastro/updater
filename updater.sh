@@ -13,13 +13,13 @@ sudo pip3 install --upgrade pip setuptools flake8 ipdb httpie argparse --upgrade
 gem update
 gem cleanup
 
-cd ~/ubuntu-updater && git fetch && git rebase && cd -
+cd ~/ubuntu-updater && git fetch --all && git rebase && cd -
 
-cd ~/dotfiles && git fetch && git rebase && cd -
+cd ~/dotfiles && git fetch --all && git rebase && cd -
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
 
-cd ~/vim-ide && git fetch && git rebase && cd -
+cd ~/vim-ide && git fetch --all && git rebase && cd -
 vim +PluginInstall +qa
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
