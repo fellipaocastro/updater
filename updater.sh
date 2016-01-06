@@ -1,3 +1,5 @@
+cd ~
+
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
@@ -29,3 +31,5 @@ if [[ "$SHELL" == "/bin/zsh" ]]; then
 elif [[ "$SHELL" == "/bin/bash" ]]; then
     hash -r
 fi
+
+cd -
