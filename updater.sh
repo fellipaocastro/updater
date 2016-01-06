@@ -1,5 +1,3 @@
-cd ~
-
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
@@ -12,8 +10,10 @@ sudo aptitude clean -y
 sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
 sudo pip3 install -U pip setuptools flake8 ipdb argparse
 
+cd ~
 gem update
 gem cleanup
+cd -
 
 cd ~/ubuntu-updater && git fetch --all && git rebase && cd -
 
@@ -31,5 +31,3 @@ if [[ "$SHELL" == "/bin/zsh" ]]; then
 elif [[ "$SHELL" == "/bin/bash" ]]; then
     hash -r
 fi
-
-cd -
