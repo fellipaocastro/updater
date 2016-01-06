@@ -7,8 +7,8 @@ sudo aptitude update -y
 sudo aptitude upgrade -y
 sudo aptitude clean -y
 
-sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-sudo pip3 install -U pip setuptools flake8 ipdb httpie argparse
+sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
+sudo pip3 install -U pip setuptools flake8 ipdb argparse
 
 gem update
 gem cleanup
