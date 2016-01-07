@@ -15,15 +15,25 @@ gem update
 gem cleanup
 cd -
 
-cd ~/ubuntu-updater && git fetch --all && git rebase && cd -
+cd ~/ubuntu-updater
+git fetch --all
+git rebase
+cd -
 
-cd ~/dotfiles && git stash && git fetch --all && git rebase && git stash pop
+cd ~/dotfiles
+git stash
+git fetch --all
+git rebase
+git stash pop
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
 tmux source-file ~/.tmux.conf
 cd -
 
-cd ~/vim-ide && git fetch --all && git rebase && cd -
+cd ~/vim-ide
+git fetch --all
+git rebase
+cd -
 vim +PluginInstall +qa
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
