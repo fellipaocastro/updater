@@ -1,7 +1,7 @@
 #!/bin/bash
 rm -f ~/updater.sh
-rm -rf ~/ubuntu-updater
+rm -rf ~/updater
 
-git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
+git clone https://github.com/fellipecastro/updater.git ~/updater
 
-ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
+ln -s ~/updater/updater.sh ~/updater.sh
