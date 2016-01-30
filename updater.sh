@@ -1,11 +1,23 @@
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get autoremove -y
-sudo apt-get clean -y
-
-sudo aptitude update -y
-sudo aptitude upgrade -y
-sudo aptitude clean -y
+#!/bin/bash
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get autoremove -y
+    sudo apt-get clean -y
+    
+    sudo aptitude update -y
+    sudo aptitude upgrade -y
+    sudo aptitude clean -y
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    brew update
+    brew upgrade
+    brew cleanup
+    brew prune
+    brew doctor
+    
+    brew cask cleanup
+    brew cask doctor
+fi
 
 sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
 sudo pip3 install -U pip setuptools flake8 ipdb argparse
@@ -15,7 +27,7 @@ gem update
 gem cleanup
 cd -
 
-cd ~/ubuntu-updater
+cd ~/updater
 git fetch --all
 git rebase
 cd -
