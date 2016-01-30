@@ -1,7 +1,7 @@
-ubuntu-updater
-==============
+updater
+=======
 
-Ubuntu Updater
+Updater
 
 Setup
 -----
