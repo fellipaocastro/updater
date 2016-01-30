@@ -8,7 +8,7 @@ Setup
 
 .. code-block:: bash
 
-    $ wget -NP /tmp http://is.gd/qVPryF && source /tmp/qVPryF
+    $ wget -NP /tmp http://is.gd/yDgV6m && source /tmp/yDgV6m
 
 Usage
 -----
