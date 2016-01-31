@@ -48,6 +48,12 @@ git rebase
 cd -
 vim +PluginInstall +qa
 
+cd ~/zsh-syntax-highlighting
+git fetch --all
+git rebase
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+cd -
+
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
 elif [[ "$SHELL" == "/bin/bash" ]]; then
