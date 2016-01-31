@@ -37,10 +37,10 @@ git stash
 git fetch --all
 git rebase
 git stash pop
+cd -
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
 tmux source-file ~/.tmux.conf
-cd -
 
 cd ~/vim-ide
 git fetch --all
@@ -51,8 +51,8 @@ vim +PluginInstall +qa
 cd ~/zsh-syntax-highlighting
 git fetch --all
 git rebase
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 cd -
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
