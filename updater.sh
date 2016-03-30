@@ -4,7 +4,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo apt-get upgrade -y
     sudo apt-get autoremove -y
     sudo apt-get clean -y
-    
+
     sudo aptitude update -y
     sudo aptitude upgrade -y
     sudo aptitude clean -y
@@ -14,7 +14,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew cleanup
     brew prune
     brew doctor
-    
+
     brew cask cleanup
     brew cask doctor
 fi
