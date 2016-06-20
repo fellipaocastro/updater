@@ -40,7 +40,7 @@ git stash pop
 cd -
 source  ~/.zsh_aliases
 source  ~/.zsh_functions
-tmux source-file ~/.tmux.conf
+tmux start-server \; source-file ~/.tmux.conf
 
 cd ~/vim-ide
 git fetch --all
