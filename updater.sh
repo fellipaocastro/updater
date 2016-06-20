@@ -54,6 +54,8 @@ git rebase
 cd -
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+upgrade_oh_my_zsh
+
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
 elif [[ "$SHELL" == "/bin/bash" ]]; then
