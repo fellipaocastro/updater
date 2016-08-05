@@ -19,8 +19,13 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew cask doctor
 fi
 
-sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
-sudo pip3 install -U pip setuptools flake8 ipdb argparse
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
+    sudo pip3 install -U pip setuptools wheels flake8 ipdb argparse
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
+    pip3 install -U pip setuptools wheels flake8 ipdb argparse
+fi
 
 cd ~
 gem update
