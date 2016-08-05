@@ -20,10 +20,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
+    sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
     sudo pip3 install -U pip setuptools wheels flake8 ipdb argparse
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
+    pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
     pip3 install -U pip setuptools wheels flake8 ipdb argparse
 fi
 
