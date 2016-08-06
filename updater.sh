@@ -59,6 +59,23 @@ git rebase
 cd -
 source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+cd ~/dracula_zsh
+git fetch --all
+git rebase
+cd -
+
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    cd ~/dracula_iterm
+    git fetch --all
+    git rebase
+    cd -
+
+    cd ~/dracula_terminal_app
+    git fetch --all
+    git rebase
+    cd -
+fi
+
 upgrade_oh_my_zsh
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
