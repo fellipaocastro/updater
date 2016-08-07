@@ -47,6 +47,11 @@ source  ~/.zsh_aliases
 source  ~/.zsh_functions
 tmux start-server \; source-file ~/.tmux.conf
 
+cd ~/dotfiles_work
+git fetch --all
+git rebase
+cd -
+
 cd ~/vim-ide
 git fetch --all
 git rebase
