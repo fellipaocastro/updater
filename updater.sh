@@ -9,6 +9,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo aptitude upgrade -y
     sudo aptitude clean -y
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+    sudo softwareupdate --schedule off
     sudo softwareupdate --verbose --install --all
 
     brew update
