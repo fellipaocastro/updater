@@ -20,8 +20,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     brew cask cleanup
     brew cask doctor
-
-    sudo port -v selfupdate
 fi
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
