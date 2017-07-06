@@ -23,17 +23,17 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-    sudo pip3 install -U pip setuptools wheel flake8 ipdb argparse
+    # sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+    # sudo pip3 install -U pip setuptools wheel flake8 ipdb argparse
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-    pip3 install -U pip setuptools wheel flake8 ipdb argparse
+    # pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+    # pip3 install -U pip setuptools wheel flake8 ipdb argparse
 fi
 
-cd ~
-gem update
-gem cleanup
-cd -
+# cd ~
+# gem update
+# gem cleanup
+# cd -
 
 cd ~/updater
 git fetch --all
