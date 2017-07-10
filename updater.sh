@@ -22,62 +22,62 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew cask doctor
 fi
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    # sudo pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-    # sudo pip3 install -U pip setuptools wheel flake8 ipdb argparse
-elif [[ "$OSTYPE" == "darwin"* ]]; then
-    # pip2 install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-    # pip3 install -U pip setuptools wheel flake8 ipdb argparse
+if [ -d "$HOME/updater" ]; then
+    cd ~/updater
+    git fetch --all
+    git rebase
+    cd -
+fi  
+
+if [ -d "$HOME/dotfiles" ]; then
+    git stash
+    git fetch --all
+    git rebase
+    git stash pop
+    cd -
+    source  ~/.zsh_aliases
+    source  ~/.zsh_functions
+    tmux start-server \; source-file ~/.tmux.conf
 fi
 
-# cd ~
-# gem update
-# gem cleanup
-# cd -
+if [ -d "$HOME/dotfiles_work" ]; then
+    cd ~/dotfiles_work
+    git fetch --all
+    git rebase
+    cd -
+fi
 
-cd ~/updater
-git fetch --all
-git rebase
-cd -
+if [ -d "$HOME/vim-ide" ]; then
+    cd ~/vim-ide
+    git fetch --all
+    git rebase
+    cd -
+    vim +PluginInstall +qa
+fi
 
-cd ~/dotfiles
-git stash
-git fetch --all
-git rebase
-git stash pop
-cd -
-source  ~/.zsh_aliases
-source  ~/.zsh_functions
-tmux start-server \; source-file ~/.tmux.conf
+if [ -d "$HOME/zsh-syntax-highlighting" ]; then
+    cd ~/zsh-syntax-highlighting
+    git fetch --all
+    git rebase
+    cd -
+    source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
-cd ~/dotfiles_work
-git fetch --all
-git rebase
-cd -
+if [ -d "$HOME/dracula_zsh" ]; then
+    cd ~/dracula_zsh
+    git fetch --all
+    git rebase
+    cd -
+fi
 
-cd ~/vim-ide
-git fetch --all
-git rebase
-cd -
-vim +PluginInstall +qa
-
-cd ~/zsh-syntax-highlighting
-git fetch --all
-git rebase
-cd -
-source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-cd ~/dracula_zsh
-git fetch --all
-git rebase
-cd -
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
+if [ -d "$HOME/dracula_iterm" ]; then
     cd ~/dracula_iterm
     git fetch --all
     git rebase
     cd -
+fi
 
+if [ -d "$HOME/dracula_terminal_app" ]; then
     cd ~/dracula_terminal_app
     git fetch --all
     git rebase
