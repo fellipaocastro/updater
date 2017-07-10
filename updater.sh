@@ -23,13 +23,14 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 if [ -d "$HOME/updater" ]; then
-    cd ~/updater
+    cd $HOME/updater
     git fetch --all
     git rebase
     cd -
-fi  
+fi
 
 if [ -d "$HOME/dotfiles" ]; then
+    cd $HOME/dotfiles
     git stash
     git fetch --all
     git rebase
@@ -41,14 +42,14 @@ if [ -d "$HOME/dotfiles" ]; then
 fi
 
 if [ -d "$HOME/dotfiles_work" ]; then
-    cd ~/dotfiles_work
+    cd $HOME/dotfiles_work
     git fetch --all
     git rebase
     cd -
 fi
 
 if [ -d "$HOME/vim-ide" ]; then
-    cd ~/vim-ide
+    cd $HOME/vim-ide
     git fetch --all
     git rebase
     cd -
@@ -56,7 +57,7 @@ if [ -d "$HOME/vim-ide" ]; then
 fi
 
 if [ -d "$HOME/zsh-syntax-highlighting" ]; then
-    cd ~/zsh-syntax-highlighting
+    cd $HOME/zsh-syntax-highlighting
     git fetch --all
     git rebase
     cd -
@@ -64,21 +65,21 @@ if [ -d "$HOME/zsh-syntax-highlighting" ]; then
 fi
 
 if [ -d "$HOME/dracula_zsh" ]; then
-    cd ~/dracula_zsh
+    cd $HOME/dracula_zsh
     git fetch --all
     git rebase
     cd -
 fi
 
 if [ -d "$HOME/dracula_iterm" ]; then
-    cd ~/dracula_iterm
+    cd $HOME/dracula_iterm
     git fetch --all
     git rebase
     cd -
 fi
 
 if [ -d "$HOME/dracula_terminal_app" ]; then
-    cd ~/dracula_terminal_app
+    cd $HOME/dracula_terminal_app
     git fetch --all
     git rebase
     cd -
