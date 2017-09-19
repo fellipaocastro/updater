@@ -87,6 +87,8 @@ fi
 
 upgrade_oh_my_zsh
 
+npm install -g npm
+
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
 elif [[ "$SHELL" == "/bin/bash" ]]; then
