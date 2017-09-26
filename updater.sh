@@ -85,9 +85,7 @@ if [ -d "$HOME/dracula_terminal_app" ]; then
     cd -
 fi
 
-if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    sudo npm install -g npm
-elif [[ "$OSTYPE" == "darwin"* ]]; then
+if [[ "$OSTYPE" == "darwin"* ]]; then
     npm install -g npm
 fi
 
