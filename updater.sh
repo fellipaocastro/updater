@@ -89,6 +89,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     npm install -g npm
 fi
 
+asdf plugin-update --all
+
 upgrade_oh_my_zsh
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
