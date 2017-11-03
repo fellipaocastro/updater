@@ -85,9 +85,9 @@ if [ -d "$HOME/dracula_terminal_app" ]; then
     cd -
 fi
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
+# if [[ "$OSTYPE" == "darwin"* ]]; then
     npm install -g npm
-fi
+# fi
 
 asdf plugin-update --all
 
