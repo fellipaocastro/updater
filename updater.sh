@@ -18,6 +18,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew prune
     brew doctor
 
+    brew tap caskroom/cask
+    brew tap caskroom/versions
+
     brew cask cleanup
     brew cask doctor
 fi
