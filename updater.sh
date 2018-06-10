@@ -89,6 +89,22 @@ if [ -d "$HOME/dracula_terminal_app" ]; then
     cd -
 fi
 
+pyenv activate jupyter3
+pip install --upgrade pip
+pyenv deactivate
+
+pyenv activate ipython2
+pip install --upgrade pip
+pyenv deactivate
+
+pyenv activate tools3
+pip install --upgrade pip
+pyenv deactivate
+
+pyenv activate tools2
+pip install --upgrade pip
+pyenv deactivate
+
 # if [[ "$OSTYPE" == "darwin"* ]]; then
     npm install -g npm
 # fi
