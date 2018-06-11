@@ -88,6 +88,7 @@ if [ -d "$HOME/dracula_terminal_app" ]; then
     cd -
 fi
 
+pip2 install --upgrade pip
 pip install --upgrade pip
 
 pyenv activate jupyter3
