@@ -35,10 +35,8 @@ fi
 
 if [ -d "$HOME/dotfiles" ]; then
     cd $HOME/dotfiles
-    git stash
     git fetch --all
     git rebase
-    git stash pop
     cd -
     source  ~/.zsh_aliases
     source  ~/.zsh_functions
@@ -50,6 +48,7 @@ if [ -d "$HOME/dotfiles_work" ]; then
     git fetch --all
     git rebase
     cd -
+    source  ~/.zsh_work
 fi
 
 if [ -d "$HOME/vim-ide" ]; then
