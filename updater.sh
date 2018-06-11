@@ -89,6 +89,8 @@ if [ -d "$HOME/dracula_terminal_app" ]; then
     cd -
 fi
 
+pip install --upgrade pip
+
 pyenv activate jupyter3
 pip install --upgrade pip
 pyenv deactivate
