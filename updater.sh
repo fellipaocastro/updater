@@ -107,11 +107,9 @@ pyenv activate tools2
 pip install --upgrade pip
 pyenv deactivate
 
-# if [[ "$OSTYPE" == "darwin"* ]]; then
-    npm install -g npm
-# fi
-
+asdf update
 asdf plugin-update --all
+npm i -g npm
 
 upgrade_oh_my_zsh
 
