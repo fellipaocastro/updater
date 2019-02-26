@@ -119,6 +119,8 @@ asdf update
 asdf plugin-update --all
 npm i -g npm
 
+docker image prune -af
+
 upgrade_oh_my_zsh
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
