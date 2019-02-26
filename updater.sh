@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     sudo softwareupdate --schedule off
     sudo softwareupdate --verbose --install --all
-    
+
     mas upgrade
 
     brew update
