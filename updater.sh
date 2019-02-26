@@ -120,6 +120,8 @@ asdf plugin-update --all
 npm i -g npm
 
 docker image prune -af
+docker container prune -f
+docker volume prune -f
 
 upgrade_oh_my_zsh
 
