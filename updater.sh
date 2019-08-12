@@ -98,6 +98,8 @@ fi
 
 pip install --upgrade pip
 
+pyenv update
+
 pyenv activate jupyter3
 pip install --upgrade pip
 pyenv deactivate
