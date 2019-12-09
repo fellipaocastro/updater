@@ -20,7 +20,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew cleanup
     brew doctor
 
-    brew tap homebrew/cask-cask
+    brew tap homebrew/cask
     brew tap homebrew/cask-versions
     brew tap homebrew/services
 
