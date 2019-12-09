@@ -14,6 +14,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     mas upgrade
 
+    brew update-reset
     brew update
     brew upgrade
     brew cleanup
