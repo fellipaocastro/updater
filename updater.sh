@@ -101,19 +101,11 @@ pip install --upgrade pip
 
 pyenv update
 
-pyenv activate jupyter3
+pyenv activate jupyter
 pip install --upgrade pip
 pyenv deactivate
 
-pyenv activate ipython2
-pip install --upgrade pip
-pyenv deactivate
-
-pyenv activate tools3
-pip install --upgrade pip
-pyenv deactivate
-
-pyenv activate tools2
+pyenv activate tools
 pip install --upgrade pip
 pyenv deactivate
 
