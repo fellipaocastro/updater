@@ -117,7 +117,7 @@ docker image prune -af
 docker container prune -f
 docker volume prune -f
 
-upgrade_oh_my_zsh
+omz update
 
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
