@@ -23,8 +23,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap homebrew/cask
     brew tap homebrew/cask-versions
     brew tap homebrew/services
-
-    brew cask doctor
 fi
 
 if [ -d "$HOME/updater" ]; then
