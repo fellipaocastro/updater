@@ -111,10 +111,10 @@ asdf update
 asdf plugin-update --all
 npm i -g npm
 
-docker system prune -af
-docker image prune -af
-docker container prune -f
-docker volume prune -f
+# docker system prune -af
+# docker image prune -af
+# docker container prune -f
+# docker volume prune -f
 
 omz update
 
