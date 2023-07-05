@@ -15,6 +15,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo apt-get autoremove -y
     sudo apt-get clean -y
 
+    echo -e '\n'
+
     sudo aptitude update -y
     sudo aptitude upgrade -y
     sudo aptitude clean -y
@@ -24,7 +26,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     sudo softwareupdate --schedule off
     sudo softwareupdate --verbose --install --all
 
+    echo -e '\n'
+
     mas upgrade
+
+    echo -e '\n'
 
     brew update-reset
     brew update
@@ -131,9 +137,13 @@ pip install --upgrade pip
 echo -e '\n----------------------------------------------------------------------------------- [!] pyenv update\n'
 pyenv update
 
+echo -e '\n'
+
 pyenv activate jupyter
 pip install --upgrade pip
 pyenv deactivate
+
+echo -e '\n'
 
 pyenv activate tools
 pip install --upgrade pip
