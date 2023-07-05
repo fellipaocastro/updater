@@ -2,7 +2,7 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo -e '\n----------------------------------------------------------------------------------------- [!] Ubuntu\n'
 
-    lsb_release -a
+    echo -e 'lsb_release -a'
 
     echo -e '\n'
 
