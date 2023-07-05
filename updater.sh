@@ -23,6 +23,10 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo -e '\n------------------------------------------------------------------------------------------ [!] macOS\n'
 
+    sw_vers
+
+    echo -e '\n'
+
     sudo softwareupdate --schedule off
     sudo softwareupdate --verbose --install --all
 
