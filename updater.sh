@@ -2,6 +2,14 @@
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo -e '\n----------------------------------------------------------------------------------------- [!] Ubuntu\n'
 
+    lsb_release -a
+
+    echo -e '\n'
+
+    uname -r
+
+    echo -e '\n'
+
     sudo apt-get update -y
     sudo apt-get upgrade -y
     sudo apt-get autoremove -y
