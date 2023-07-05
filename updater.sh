@@ -4,11 +4,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     lsb_release -a
 
-    echo -e '\n'
+    # echo -e '\n'
 
     uname -r
 
-    echo -e '\n'
+    # echo -e '\n'
 
     sudo apt-get update -y
     sudo apt-get upgrade -y
