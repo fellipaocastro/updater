@@ -52,8 +52,10 @@ if [ -d "$HOME/dotfiles" ]; then
         echo -e '\n--------------------------------------------------------------------------------------- [!] dotfiles\n'
 
         cd $HOME/dotfiles && \
+        git stash
         git fetch --all && \
         git rebase
+        git stash pop
     )
     source  ~/.zsh_aliases
     source  ~/.zsh_functions
