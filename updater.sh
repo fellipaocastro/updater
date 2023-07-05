@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo aptitude upgrade -y
     sudo aptitude clean -y
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-    echo -e '\n[!] macOS ------------------------------------------------------------------------------------------'
+    echo -e '\n[!] macOS ------------------------------------------------------------------------------------------\n'
 
     sudo softwareupdate --schedule off
     sudo softwareupdate --verbose --install --all
@@ -31,7 +31,7 @@ fi
 
 if [ -d "$HOME/updater" ]; then
     (
-        echo -e '\n[!] updater ----------------------------------------------------------------------------------------'
+        echo -e '\n[!] updater ----------------------------------------------------------------------------------------\n'
 
         cd $HOME/updater && \
         git fetch --all && \
@@ -41,7 +41,7 @@ fi
 
 if [ -d "$HOME/dotfiles" ]; then
     (
-        echo -e '\n[!] dotfiles ---------------------------------------------------------------------------------------'
+        echo -e '\n[!] dotfiles ---------------------------------------------------------------------------------------\n'
 
         cd $HOME/dotfiles && \
         git fetch --all && \
@@ -54,7 +54,7 @@ fi
 
 if [ -d "$HOME/dotfiles_work" ]; then
     (
-        echo -e '\n[!] dotfiles_work ----------------------------------------------------------------------------------'
+        echo -e '\n[!] dotfiles_work ----------------------------------------------------------------------------------\n'
 
         cd $HOME/dotfiles_work && \
         git fetch --all && \
@@ -65,7 +65,7 @@ fi
 
 if [ -d "$HOME/vim-ide" ]; then
     (
-        echo -e '\n[!] vim-ide ----------------------------------------------------------------------------------------'
+        echo -e '\n[!] vim-ide ----------------------------------------------------------------------------------------\n'
 
         $HOME/vim-ide && \
         git fetch --all && \
@@ -76,7 +76,7 @@ fi
 
 if [ -d "$HOME/zsh-syntax-highlighting" ]; then
     (
-        echo -e '\n[!] zsh-syntax-highlighting ------------------------------------------------------------------------'
+        echo -e '\n[!] zsh-syntax-highlighting ------------------------------------------------------------------------\n'
 
         cd $HOME/zsh-syntax-highlighting && \
         git fetch --all && \
@@ -87,7 +87,7 @@ fi
 
 if [ -d "$HOME/dracula_zsh" ]; then
     (
-        echo -e '\n[!] dracula_zsh ------------------------------------------------------------------------------------'
+        echo -e '\n[!] dracula_zsh ------------------------------------------------------------------------------------\n'
 
         cd $HOME/dracula_zsh && \
         git fetch --all && \
@@ -97,7 +97,7 @@ fi
 
 if [ -d "$HOME/dracula_iterm" ]; then
     (
-        echo -e '\n[!] dracula_iterm ----------------------------------------------------------------------------------'
+        echo -e '\n[!] dracula_iterm ----------------------------------------------------------------------------------\n'
 
         cd $HOME/dracula_iterm && \
         git fetch --all && \
@@ -107,7 +107,7 @@ fi
 
 if [ -d "$HOME/dracula_terminal_app" ]; then
     (
-        echo -e '\n[!] dracula_terminal_app ---------------------------------------------------------------------------'
+        echo -e '\n[!] dracula_terminal_app ---------------------------------------------------------------------------\n'
 
         cd $HOME/dracula_terminal_app && \
         git fetch --all && \
@@ -115,10 +115,10 @@ if [ -d "$HOME/dracula_terminal_app" ]; then
     )
 fi
 
-echo -e '\n[!] pip upgrade ------------------------------------------------------------------------------------'
+echo -e '\n[!] pip upgrade ------------------------------------------------------------------------------------\n'
 pip install --upgrade pip
 
-echo -e '\n[!] pyenv update -----------------------------------------------------------------------------------'
+echo -e '\n[!] pyenv update -----------------------------------------------------------------------------------\n'
 pyenv update
 
 pyenv activate jupyter
@@ -129,21 +129,21 @@ pyenv activate tools
 pip install --upgrade pip
 pyenv deactivate
 
-echo -e '\n[!] asdf update ------------------------------------------------------------------------------------'
+echo -e '\n[!] asdf update ------------------------------------------------------------------------------------\n'
 asdf update
 asdf plugin-update --all
 npm i -g npm
 
-echo -e '\n[!] docker cleansing -------------------------------------------------------------------------------'
+echo -e '\n[!] docker cleansing -------------------------------------------------------------------------------\n'
 docker system prune -af
 docker image prune -af
 docker container prune -f
 docker volume prune -f
 
-echo -e '\n[!] omz update -------------------------------------------------------------------------------------'
+echo -e '\n[!] omz update -------------------------------------------------------------------------------------\n'
 omz update
 
-echo -e '\n[!] rehash -----------------------------------------------------------------------------------------'
+echo -e '\n[!] rehash -----------------------------------------------------------------------------------------\n'
 if [[ "$SHELL" == "/bin/zsh" ]]; then
     rehash
 elif [[ "$SHELL" == "/bin/bash" ]]; then
