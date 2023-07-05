@@ -75,7 +75,7 @@ if [ -d "$HOME/vim-ide" ]; then
     (
         echo -e '\n---------------------------------------------------------------------------------------- [!] vim-ide\n'
 
-        $HOME/vim-ide && \
+        cd $HOME/vim-ide && \
         git fetch --all && \
         git rebase
     )
