@@ -7,7 +7,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     echo -e '\n'
 
-    free -b | grep Mem | awk '{print memory: $2/1073741824 " GB"}'
+    free -b | grep Mem | awk '{print "memory: " $2/1073741824 " GB"}'
     
     echo -e '\n--------------------------------------------------------------------- [!] Ubuntu\n'
 
@@ -36,7 +36,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     echo -e '\n'
 
-    sysctl -n hw.memsize | awk '{print memory: $0/1073741824 " GB"}'
+    sysctl -n hw.memsize | awk '{print "memory: " $0/1073741824 " GB"}'
 
     echo -e '\n---------------------------------------------------------------------- [!] macOS\n'
 
