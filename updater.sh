@@ -5,7 +5,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
 
-    echo -e '\n'
+    echo '\n'
 
     free -b | grep Mem | awk '{print "memory: " $2/1073741824 " GB"}'
     
@@ -34,7 +34,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     
     sysctl machdep.cpu | egrep 'core_count|thread_count|brand_string'
 
-    echo -e '\n'
+    echo '\n'
 
     sysctl -n hw.memsize | awk '{print "memory: " $0/1073741824 " GB"}'
 
