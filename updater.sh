@@ -1,9 +1,11 @@
 #!/bin/bash
-echo -e '\n---------------------------------------------------------------- [!] Processador\n'
-
-lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    echo -e '\n------------------------------------------------------------------- [!] Hardware\n'
+
+    lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+    free -b | grep Mem | awk '{print $2/1073741824 " GB"}'
+    
     echo -e '\n--------------------------------------------------------------------- [!] Ubuntu\n'
 
     lsb_release -a
@@ -25,6 +27,11 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     sudo aptitude upgrade -y
     sudo aptitude clean -y
 elif [[ "$OSTYPE" == "darwin"* ]]; then
+    echo -e '\n------------------------------------------------------------------- [!] Hardware\n'
+    
+    sysctl machdep.cpu | egrep 'core_count|thread_count|brand_string'
+    sysctl -n hw.memsize | awk '{print $0/1073741824 " GB"}'
+
     echo -e '\n---------------------------------------------------------------------- [!] macOS\n'
 
     sw_vers
