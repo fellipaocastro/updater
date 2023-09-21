@@ -6,6 +6,10 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 
     echo -e '\n'
 
+    lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
+    echo -e '\n'
+
     uname -r
 
     echo -e '\n'
@@ -24,6 +28,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo -e '\n---------------------------------------------------------------------- [!] macOS\n'
 
     sw_vers
+
+    echo -e '\n'
+
+    lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
 
     echo -e '\n'
 
