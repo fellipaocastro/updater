@@ -1,12 +1,12 @@
 #!/bin/bash
+echo -e '\n---------------------------------------------------------------- [!] Processador\n'
+
+lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo -e '\n--------------------------------------------------------------------- [!] Ubuntu\n'
 
     lsb_release -a
-
-    echo -e '\n'
-
-    lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
 
     echo -e '\n'
 
@@ -28,10 +28,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     echo -e '\n---------------------------------------------------------------------- [!] macOS\n'
 
     sw_vers
-
-    echo -e '\n'
-
-    lscpu | egrep 'Model name|Socket|Thread|NUMA|CPU\(s\)'
 
     echo -e '\n'
 
