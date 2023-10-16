@@ -177,7 +177,7 @@ echo -e '\n----------------------------------------------------------- [!] docke
 docker system prune -af
 docker image prune -af
 docker container prune -f
-docker volume prune -f
+docker volume prune -af
 
 echo -e '\n----------------------------------------------------------------- [!] omz update\n'
 omz update
