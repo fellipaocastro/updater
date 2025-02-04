@@ -60,6 +60,10 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap homebrew/services
 fi
 
+echo -e '\n--------------------------------------------------------------------- [!] rm tmp\n'
+sudo rm -rf /tmp/*
+sudo rm -rf /var/tmp/*
+
 if [ -d "$HOME/updater" ]; then
     (
         echo -e '\n-------------------------------------------------------------------- [!] updater\n'
@@ -181,10 +185,6 @@ docker volume prune -af
 
 echo -e '\n----------------------------------------------------------------- [!] omz update\n'
 omz update
-
-echo -e '\n--------------------------------------------------------------------- [!] rm tmp\n'
-sudo rm -rf /tmp/*
-sudo rm -rf /var/tmp/*
 
 echo -e '\n--------------------------------------------------------------------- [!] rehash\n'
 if [[ "$SHELL" == "/bin/zsh" ]]; then
