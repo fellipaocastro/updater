@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo -e '\n--------------------------------------------------------------------- [!] rm tmp\n'
+sudo rm -rf /tmp/*
+sudo rm -rf /var/tmp/*
+
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo -e '\n------------------------------------------------------------------- [!] Hardware\n'
 
@@ -59,10 +63,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     brew tap homebrew/cask-versions
     brew tap homebrew/services
 fi
-
-echo -e '\n--------------------------------------------------------------------- [!] rm tmp\n'
-sudo rm -rf /tmp/*
-sudo rm -rf /var/tmp/*
 
 if [ -d "$HOME/updater" ]; then
     (
